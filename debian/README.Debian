@@ -1,0 +1,25 @@
+pd-zexy for Debian
+-------------------
+
+Usage:
+
+to start Pd with the zexy addon library, issue the command (without the '%' sign)
+
+% pd -path /usr/lib/pd/extra/zexy -lib zexy
+
+OR
+
+start Pd
+- navigate to "File->Path..." and add "/usr/lib/pd/extra/zexy" to the list of search-paths
+- click OK
+- navigate to "File->Startup..." and add "zexy" to the list of binaries to be loaded
+- click "Apply" and "Save all settings"
+
+OR 
+
+add the following lines to your ~/.pdrc file (deprecated)
+
+-path /usr/lib/pd/extra/zexy
+-lib zexy
+
+ -- IOhannes m zmölnig <zmoelnig@iem.at>, Wed, 11 Aug 2010 08:45:00 +0200
