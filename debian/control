@@ -6,6 +6,8 @@ Build-Depends: debhelper (>= 7.9.3~), quilt (>= 0.46-7~),
 		puredata
 Standards-Version: 3.9.1
 Homepage: http://puredata.info/community/projects/software/zexy
+Vcs-Git: git://git.debian.org/pkg-multimedia/pd-zexy.git
+Vcs-Browser: http://git.debian.org/?p=pkg-multimedia/pd-zexy.git;a=summary
 
 Package: pd-zexy
 Architecture: any
