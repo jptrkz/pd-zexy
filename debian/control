@@ -2,7 +2,7 @@ Source: pd-zexy
 Section: sound
 Priority: optional
 Maintainer: IOhannes m zmoelnig (gpg-key at iem) <zmoelnig@iem.at>
-Build-Depends: debhelper (>= 7.9.3~), quilt (>= 0.46-7~),
+Build-Depends: debhelper (>= 7.9.3~), quilt (>= 0.46-7~), cdbs,
 		puredata
 Standards-Version: 3.9.1
 Homepage: http://puredata.info/community/projects/software/zexy
