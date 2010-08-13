@@ -1,0 +1,11 @@
+pd-zexy (2.2.3-1) unstable; urgency=low
+
+  runtime components installed into /usr/lib/pd/extra/zexy
+
+  in order to prevent namespace pollution (and in sync with upstream), all
+  runtime components of zexy (binary + abstractions) are now installed into
+  /usr/lib/pd/extra/zexy.
+  if you want to use the zexy abstractions, you will have to add this to Pd's
+  search path (see README.Debian)
+
+ -- IOhannes m zmoelnig (gpg-key at iem) <zmoelnig@iem.at>  Fri, 13 Aug 2010 12:22:58 +0200
