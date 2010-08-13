@@ -22,4 +22,4 @@ add the following lines to your ~/.pdrc file (deprecated)
 -path /usr/lib/pd/extra/zexy
 -lib zexy
 
- -- IOhannes m zmölnig <zmoelnig@iem.at>, Wed, 11 Aug 2010 08:45:00 +0200
+ -- IOhannes m zmÃ¶lnig <zmoelnig@iem.at>, Wed, 11 Aug 2010 08:45:00 +0200
