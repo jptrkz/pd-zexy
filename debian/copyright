@@ -4,7 +4,13 @@ Wed,  6 Nov 2002 12:38:33 +0100.
 Downloaded from <pure-data.sf.net>
 
 Copyright: 
-	  Copyright 1999-2010 IOhannes m zmoelnig
+	Copyright 1999-2010 IOhannes m zmoelnig
+
+	optimization (abs~, abssgn~, dirac~):	
+		Copyright 2005-2006 Tim Blechmann
+
+	OSC-pattern matching:
+		Copyright 1998-2004 Matt Wright
 
 This software is distributed under the GPL version 2 
 (see /usr/share/common-licenses/GPL-2).
