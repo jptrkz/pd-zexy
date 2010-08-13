@@ -7,7 +7,7 @@ STRIP=/bin/true
 export STRIP
 
 # where sources are
-DEB_SRCDIR = $(CURDIR)/src
+DEB_SRCDIR = src
 
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/autotools.mk
