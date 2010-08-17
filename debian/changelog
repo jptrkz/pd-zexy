@@ -5,9 +5,9 @@ pd-zexy (2.2.3-1) unstable; urgency=low
   * debian/rules: simplified and don't strip binaries (Closes: #437763)
   * everything gets installed to /usr/lib/pd/extra/zexy/ (add to pd-path)
   * git'ified package
-  * quilt'ified package (currently no patches needed)
+  * Use dpkg source format 3.0 (quilt)
 
- -- IOhannes m zmoelnig (gpg-key at iem) <zmoelnig@iem.at>  Thu, 12 Aug 2010 10:17:52 +0200
+ -- IOhannes m zmoelnig (gpg-key at iem) <zmoelnig@iem.at>  Tue, 17 Aug 2010 12:38:21 +0200
 
 pd-zexy (2.1-1.1) unstable; urgency=low
 
