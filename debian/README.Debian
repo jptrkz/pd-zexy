@@ -1,25 +1,38 @@
 pd-zexy for Debian
 -------------------
 
+these are general instructions to load the zexy library, not specific to Debian.
+
 Usage:
 
-to start Pd with the zexy addon library, issue the command (without the '%' sign)
+zexy consists of both a (binary) library and a set of abstractions.
+Therefore, if you want to access all of the zexy objects, you need to tell Pd to
+both 
 
-% pd -path /usr/lib/pd/extra/zexy -lib zexy
+- load the library (either by adding "zexy" to the list of startup libraries in
+  Pd's preferences, or by using the "-lib zexy" commandline argument to Pd)
 
-OR
+and to
 
-start Pd
-- navigate to "File->Path..." and add "/usr/lib/pd/extra/zexy" to the list of search-paths
-- click OK
-- navigate to "File->Startup..." and add "zexy" to the list of binaries to be loaded
-- click "Apply" and "Save all settings"
+- add the search-path for the abstractions (either by adding
+  "/usr/lib/pd/extra/zexy" to the paths in Pd's preferences of by using the
+  "-path /usr/lib/pd/extra/zexy" commandlind argument to Pd)
 
-OR 
 
-add the following lines to your ~/.pdrc file (deprecated)
+step-by-step:
 
--path /usr/lib/pd/extra/zexy
--lib zexy
+ METHOD 1:
+ start Pd
+ - navigate to "File->Path..." and add "/usr/lib/pd/extra/zexy" to the list of search-paths
+ - click OK
+ - navigate to "File->Startup..." and add "zexy" to the list of binaries to be loaded
+ - click "Apply" and "Save all settings"
 
- -- IOhannes m zmölnig <zmoelnig@iem.at>, Wed, 11 Aug 2010 08:45:00 +0200
+
+ METHOD 2:
+ issue the command (without the '%' sign)
+ % pd -path /usr/lib/pd/extra/zexy -lib zexy
+
+
+
+ -- IOhannes m zmölnig <zmoelnig@iem.at>, Wed, 17 Aug 2010 12:35:00 +0200
