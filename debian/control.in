@@ -1,7 +1,8 @@
 Source: pd-zexy
 Section: sound
 Priority: optional
-Maintainer: IOhannes m zmoelnig (gpg-key at iem) <zmoelnig@iem.at>
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Uploaders: IOhannes m zmoelnig (gpg-key at iem) <zmoelnig@iem.at>
 Build-Depends: @cdbs@,
  puredata
 Standards-Version: 3.9.1
@@ -12,8 +13,8 @@ Vcs-Browser: http://git.debian.org/?p=pkg-multimedia/pd-zexy.git;a=summary
 Package: pd-zexy
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, puredata
-Description: Addon library for Pd
- zexy is "the swiss army knife for Pd".
- It provides several addon objects for the Pd computer music system, including 
- (but not limited  to) objects for message handling (construction, parsing,
+Description: General Purpose addon library for Pd
+ zexy is "the swiss army knife for Pure Data".
+ It provides several addon objects for the Pd computer music system, including
+ (but not limited to) objects for message handling (construction, parsing,
  control flow), signal handling (synthesis, analysis, comparision) et al.
