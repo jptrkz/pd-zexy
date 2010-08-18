@@ -76,7 +76,6 @@ Files: ./BUGS.txt,
 	./debian/control,
 	./debian/control.in,
 	./debian/install,
-	./debian/rules,
 	./debian/source/format,
 	./examples/README.txt,
 	./pd-zexy.info,
@@ -406,6 +405,13 @@ Copyright: $AUTOGEN_SH | head -${HEAD_N}1 | awk '{print $4}'`"
 	2005-2007, United States Government as represented by
 	from header
 License: BSD (3 clause)
+ FIXME
+
+Files: ./debian/rules
+Copyright: 2002, Guenter Geiger <geiger@debian.org>
+	2010, IOhannes m zmölnig <zmoelnig@iem.at>
+	2010, Jonas Smedegaard <dr@jones.dk>
+License: GPL
  FIXME
 
 Files: ./GnuGPL.txt
