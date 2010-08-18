@@ -1,11 +1,23 @@
-pd-zexy (2.2.3-1) unstable; urgency=low
+pd-zexy (2.2.3-1) UNRELEASED; urgency=low
 
   * New upstream version
-  * Adopt package (Closes: #546964)
-  * debian/rules: simplified and don't strip binaries (Closes: #437763)
-  * everything gets installed to /usr/lib/pd/extra/zexy/ (add to pd-path)
-  * git'ified package
-  * Use dpkg source format 3.0 (quilt)
+
+  [ IOhannes m zmölnig ]
+  * Adopt package, on behalf of Multimedia Team.
+    Closes: #546964
+  * Simply debian/rules with CDBS, and don't unconditionally strip
+    binaries.
+    Closes: #437763
+  * Install into /usr/lib/pd/extra/zexy/. Document usage in REAME.Debian
+    and warn about change in NEWS.
+  * git'ify package. Add Vcs-* stanzas to control file.
+  * Use dpkg source format 3.0 (quilt). Drop build-dependency on quilt.
+
+  [ Jonas Smedegaard ]
+  * Enable CDBS copyright-check routine.
+  * Add copyright and licensing header to debian/rules.
+  * Add myself as uploader.
+  * Rewrite debian/copyright using rev. 135 of draft DEP5 format.
 
  -- IOhannes m zmoelnig (gpg-key at iem) <zmoelnig@iem.at>  Tue, 17 Aug 2010 12:38:21 +0200
 
