@@ -1,9 +1,7 @@
 Format-Specification: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?rev=135
 Name: zexy
 Maintainer: IOhannes m zmölnig
-Source: FIXME
-
-Downloaded from <pure-data.sf.net>
+Source: http://puredata.info/community/projects/software/zexy/
 
 Copyright: 1999-2004, IOhannes m zmölnig <zmoelnig@iem.at>
 License: GPL-2
