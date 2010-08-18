@@ -18,14 +18,6 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# upstream's way to prevent stripping: override the STRIP command with something
-# harmless, like /usr/bin/true
-STRIP=/bin/true
-export STRIP
-
-# where sources are
-DEB_SRCDIR = src
-
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/autotools.mk
 
@@ -34,3 +26,11 @@ include /usr/share/cdbs/1/class/autotools.mk
 
 CDBS_BUILD_DEPENDS_rules_utils_copyright-check =
 CDBS_BUILD_DEPENDS_rules_utils_buildinfo =
+
+# upstream's way to prevent stripping: override the STRIP command with something
+# harmless, like /usr/bin/true
+STRIP=/bin/true
+export STRIP
+
+# where sources are
+DEB_SRCDIR = src
