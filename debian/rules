@@ -11,3 +11,9 @@ DEB_SRCDIR = src
 
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/autotools.mk
+
+# Relax inclusion of optional features to ease backporting
+-include /usr/share/cdbs/1/rules/utils.mk
+
+CDBS_BUILD_DEPENDS_rules_utils_copyright-check =
+CDBS_BUILD_DEPENDS_rules_utils_buildinfo =
