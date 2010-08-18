@@ -2,7 +2,8 @@ Source: pd-zexy
 Section: sound
 Priority: optional
 Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
-Uploaders: IOhannes m zmoelnig (gpg-key at iem) <zmoelnig@iem.at>
+Uploaders: IOhannes m zmoelnig (gpg-key at iem) <zmoelnig@iem.at>,
+ Jonas Smedegaard <dr@jones.dk>
 Build-Depends: @cdbs@,
  puredata
 Standards-Version: 3.9.1
