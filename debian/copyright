@@ -8,9 +8,8 @@ License: GPL-2
 
 Files: ./src/freadln.c,
 	./src/fwriteln.c
-Copyright: 2005-2007, Franz Zotter
+Copyright: 2007, Franz Zotter
 License: GPL-2
- FIXME: bogus years (probably typo)
 
 Files: ./build/autoconf/autogen.sh
 Copyright: 2005-2007, United States Government as represented by the U.S. Army Research Laboratory.
@@ -37,8 +36,7 @@ License: GPL-2
 Files: ./src/sfplay.c
 Copyright: 1999-2004, IOhannes m zmölnig <zmoelnig@iem.at>
 	1999, Winfried Ritsch <ritsch@iem.kug.ac.at>
-License: GPL-2 and UNKNOWN
- FIXME
+License: GPL-2
 
 Files: ./src/absgn~.c
 Copyright: 2006, Tim Blechmann
