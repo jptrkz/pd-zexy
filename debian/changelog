@@ -1,4 +1,4 @@
-pd-zexy (2.2.3-1) UNRELEASED; urgency=low
+pd-zexy (2.2.3-1) unstable; urgency=low
 
   * New upstream version
 
@@ -19,7 +19,7 @@ pd-zexy (2.2.3-1) UNRELEASED; urgency=low
   * Add myself as uploader.
   * Rewrite debian/copyright using rev. 135 of draft DEP5 format.
 
- -- IOhannes m zmoelnig (gpg-key at iem) <zmoelnig@iem.at>  Tue, 17 Aug 2010 12:38:21 +0200
+ -- Jonas Smedegaard <dr@jones.dk>  Fri, 20 Aug 2010 12:17:41 +0200
 
 pd-zexy (2.1-1.1) unstable; urgency=low
 
