@@ -35,4 +35,7 @@ export STRIP
 # where sources are
 DEB_SRCDIR = src
 
+# regenerate configure, so that patches to configure.ac take effect 
+DEB_AUTO_UPDATE_AUTOCONF = 2.61
+
 DEB_CONFIGURE_EXTRA_FLAGS += --with-extension=pd_linux
