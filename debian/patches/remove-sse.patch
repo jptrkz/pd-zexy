@@ -4,8 +4,8 @@ Description: remove flags for compiling with sse-support
 Author: IOhannes m zmölnig <zmoelnig@iem.at>
 Forwarded: not-needed
 Last-Update: 2010-08-23
---- pd-zexy.orig/src/configure.ac
-+++ pd-zexy/src/configure.ac
+--- a/src/configure.ac
++++ b/src/configure.ac
 @@ -153,8 +153,6 @@
   AC_CHECK_CFLAGS([-fPIC])
  fi
