@@ -1,3 +1,9 @@
+Description: remove flags for compiling with sse-support
+ debian policy requires binaries to be i486 compatible, which is not the
+ case if compiled with SSE-flags
+Author: IOhannes m zmölnig <zmoelnig@iem.at>
+Forwarded: not-needed
+Last-Update: 2010-08-23
 --- pd-zexy.orig/src/configure.ac
 +++ pd-zexy/src/configure.ac
 @@ -153,8 +153,6 @@
