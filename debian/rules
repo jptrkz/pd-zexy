@@ -39,3 +39,9 @@ DEB_SRCDIR = src
 DEB_AUTO_UPDATE_AUTOCONF = 2.61
 
 DEB_CONFIGURE_EXTRA_FLAGS += --with-extension=pd_linux
+
+# revert regenerated configure until upstream add AM_MAINTAINER_MODE
+DEB_PHONY_RULES += pristine-revert
+clean:: pristine-revert
+pristine-revert: makefile-clean
+	cp -f debian/pristine/configure src/
