@@ -1,3 +1,21 @@
+pd-zexy (2.2.3-2) UNRELEASED; urgency=low
+
+  [ IOhannes m zmölnig ]
+  * Force extension "pd_linux" (even on hurd and kfreebsd).
+  * Remove flags for compiling with sse-support.
+  * Set DEB_AUTO_UPDATE_AUTOCONF to ensure configure is regenerated.
+  * Update build-dependencies.
+
+  [ Jonas Smedegaard ]
+  * Add git-buildpackage configfile, enabling signed tags and
+    pristine-tar.
+  * Add DEP3 header to patch.
+  * Refresh patch w/ shortening options --no-timestamps --no-index -pab.
+  * Preserve upstream configure file regenerated during build.
+  * Adjust vertical spacing and wrapping of long description.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Sat, 28 Aug 2010 01:12:53 +0200
+
 pd-zexy (2.2.3-1) unstable; urgency=low
 
   * New upstream version
