@@ -1,4 +1,7 @@
-pd-zexy (2.2.3-2) UNRELEASED; urgency=low
+pd-zexy (2.2.3-2) unstable; urgency=low
+
+  [ Felipe Sateler ]
+  * Team upload.
 
   [ IOhannes m zmölnig ]
   * Force extension "pd_linux" (even on hurd and kfreebsd).
@@ -14,7 +17,7 @@ pd-zexy (2.2.3-2) UNRELEASED; urgency=low
   * Preserve upstream configure file regenerated during build.
   * Adjust vertical spacing and wrapping of long description.
 
- -- Jonas Smedegaard <dr@jones.dk>  Sat, 28 Aug 2010 01:12:53 +0200
+ -- Felipe Sateler <fsateler@debian.org>  Mon, 08 Nov 2010 20:58:14 -0300
 
 pd-zexy (2.2.3-1) unstable; urgency=low
 
