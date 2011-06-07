@@ -10,8 +10,8 @@ Build-Depends: cdbs (>= 0.4.53),
  puredata-dev | puredata
 Standards-Version: 3.9.2
 Homepage: http://puredata.info/community/projects/software/zexy
-Vcs-Git: git://git.debian.org/pkg-multimedia/pd-zexy.git
-Vcs-Browser: http://git.debian.org/?p=pkg-multimedia/pd-zexy.git;a=summary
+Vcs-Git: git://git.debian.org/pkg-multimedia/pd-zexy
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-multimedia/pd-zexy.git
 
 Package: pd-zexy
 Architecture: any
