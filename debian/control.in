@@ -6,7 +6,7 @@ Uploaders: IOhannes m zmoelnig (gpg-key at iem) <zmoelnig@iem.at>,
  Jonas Smedegaard <dr@jones.dk>
 Build-Depends: @cdbs@,
  puredata
-Standards-Version: 3.9.1
+Standards-Version: 3.9.2
 Homepage: http://puredata.info/community/projects/software/zexy
 Vcs-Git: git://git.debian.org/pkg-multimedia/pd-zexy.git
 Vcs-Browser: http://git.debian.org/?p=pkg-multimedia/pd-zexy.git;a=summary
