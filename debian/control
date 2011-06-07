@@ -15,7 +15,7 @@ Vcs-Browser: http://git.debian.org/?p=pkg-multimedia/pd-zexy.git;a=summary
 
 Package: pd-zexy
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, puredata
+Depends: ${shlibs:Depends}, ${misc:Depends}, pd
 Description: General Purpose addon library for Pd
  zexy is "the swiss army knife for Pure Data".
  .
