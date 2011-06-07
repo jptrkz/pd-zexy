@@ -4,13 +4,14 @@ Priority: optional
 Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
 Uploaders: IOhannes m zmoelnig (gpg-key at iem) <zmoelnig@iem.at>,
  Jonas Smedegaard <dr@jones.dk>
-Build-Depends: cdbs (>= 0.4.53),
- debhelper (>= 7.0.1),
+Build-Depends: debhelper (>= 7.0.1),
+ dh-buildinfo,
  autoconf,
+ cdbs (>= 0.4.91~),
  puredata-dev | puredata
 Standards-Version: 3.9.2
 Homepage: http://puredata.info/community/projects/software/zexy
-Vcs-Git: git://git.debian.org/pkg-multimedia/pd-zexy
+Vcs-Git: git://anonscm.debian.org/pkg-multimedia/pd-zexy
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-multimedia/pd-zexy.git
 
 Package: pd-zexy

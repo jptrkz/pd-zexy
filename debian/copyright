@@ -44,7 +44,7 @@ License: GPL-2
 
 Files: ./debian/*
 Copyright: 2002, Guenter Geiger <geiger@debian.org>
-	2010, IOhannes m zmölnig <zmoelnig@iem.at>
+	2010-2011, IOhannes m zmölnig <zmoelnig@iem.at>
 	2010, Jonas Smedegaard <dr@jones.dk>
 License: GPL-2+
 
