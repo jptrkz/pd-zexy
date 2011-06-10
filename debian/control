@@ -8,7 +8,7 @@ Build-Depends: debhelper (>= 7.0.1),
  dh-buildinfo,
  autoconf,
  cdbs (>= 0.4.91~),
- puredata-dev | puredata
+ puredata-dev | puredata (<< 0.43)
 Standards-Version: 3.9.2
 Homepage: http://puredata.info/community/projects/software/zexy
 Vcs-Git: git://anonscm.debian.org/pkg-multimedia/pd-zexy
