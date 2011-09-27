@@ -1,7 +1,7 @@
 /* ********************************************** */
 /* the ZEXY external                              */
 /* ********************************************** */
-/*                            forum::für::umläute */
+/*                            forum::fÃ¼r::umlÃ¤ute */
 /* ********************************************** */
 
 /* the ZEXY external is a runtime-library for miller s. puckette's realtime-computermusic-software "pure data"
@@ -50,7 +50,7 @@
 
 #include "m_pd.h"
 
-#define VERSION "2.2.3"
+#define VERSION "2.2.4"
 
 /* these pragmas are only used for MSVC, not MinGW or Cygwin */
 #ifdef _MSC_VER
@@ -103,7 +103,7 @@ typedef struct _mypdlist
 static void zexy_register(char*object){
   if(object!=0){
     post("[%s] part of zexy-%s (compiled: "__DATE__")", object, VERSION);
-    post("\tCopyright (l) 1999-2008 IOhannes m zmölnig, forum::für::umläute & IEM");
+    post("\tCopyright (l) 1999-2011 IOhannes m zmÃ¶lnig, forum::fÃ¼r::umlÃ¤ute & IEM");
   }
 }
 #else

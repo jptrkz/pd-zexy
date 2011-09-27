@@ -1,23 +1,26 @@
-/******************************************************
+/* 
+ * msgfile: an improved version of [textfile]
  *
- * zexy - implementation file
+ * (c) 1999-2011 IOhannes m zmÃ¶lnig, forum::fÃ¼r::umlÃ¤ute, institute of electronic music and acoustics (iem)
  *
- * copyleft (c) IOhannes m zmölnig
- *
- *   1999:forum::für::umläute:2004
- *
- *   institute of electronic music and acoustics (iem)
- *
- ******************************************************
- *
- * license: GNU General Public License v.2
- *
- ******************************************************/
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License along
+ * with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 
 
 /*  
     this is heavily based on code from [textfile],
-    which is part of pd and written by Miller S. Pucket
+    which is part of pd and written by Miller S. Puckette
     pd (and thus [textfile]) come with their own license
 */
 
@@ -410,9 +413,13 @@ static void msgfile_add(t_msgfile *x, t_symbol *s, int ac, t_atom *av)
 static void msgfile_add2(t_msgfile *x, t_symbol *s, int ac, t_atom *av)
 {
   msgfile_end(x);
-  if (x->current->previous) x->current = x->current->previous;
+  if (x->current) {
+    if(x->current->previous) x->current = x->current->previous;
+  } else {
+    add_currentnode(x);
+  }
   write_currentnode(x, ac, av);
-  if (x->current->next) {
+  if (x->current && x->current->next) {
     x->previous= x->current;
     x->current = x->current->next;
   }
@@ -424,6 +431,9 @@ static void msgfile_append(t_msgfile *x, t_symbol *s, int ac, t_atom *av)
 }
 static void msgfile_append2(t_msgfile *x, t_symbol *s, int ac, t_atom *av)
 {
+  if(!x->current)
+    add_currentnode(x);
+
   if (x->current->thislist) write_currentnode(x, ac, av);
   else msgfile_append(x, s, ac, av);
 }
@@ -659,7 +669,7 @@ static void msgfile_read2(t_msgfile *x, t_symbol *filename, t_symbol *format)
   fseek(fil, 0, SEEK_SET);
 
   if (!(readbuf = t_getbytes(length))) {
-    pd_error(x, "msgfile_read: could not reserve %d bytes to read into", length);
+    pd_error(x, "msgfile_read: could not reserve %ld bytes to read into", length);
     close(fd);
     return;
   }
@@ -690,7 +700,7 @@ static void msgfile_read2(t_msgfile *x, t_symbol *filename, t_symbol *format)
 
   /* read */
   if ((readlength = fread(readbuf, sizeof(char), length, fil)) < length) {
-    pd_error(x, "msgfile_read: unable to read %s: %d of %d", filnam, readlength, length);
+    pd_error(x, "msgfile_read: unable to read %s: %ld of %ld", filnam, readlength, length);
     fclose(fil);
     t_freebytes(readbuf, length);
     return;

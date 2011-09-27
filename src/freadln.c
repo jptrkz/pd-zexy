@@ -1,19 +1,22 @@
-
-/******************************************************
+/* 
+ * freadln: reads messages continuously from the lines of a file
  *
- * zexy - implementation file
+ * (c) 1999-2011 IOhannes m zm√∂lnig, forum::f√ºr::uml√§ute, institute of electronic music and acoustics (iem)
+ * (c) 2007 Franz Zotter <zotter@iem.at>, Institute of Electronic Music and Acoustics
  *
- * copyleft (c) Franz Zotter
- *
- *   2105:forum::f¸r::uml‰ute:2007
- *
- *   institute of electronic music and acoustics (iem)
- *
- ******************************************************
- *
- * license: GNU General Public License v.2
- *
- ******************************************************/
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License along
+ * with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 
 #include "zexy.h"
 
@@ -37,10 +40,6 @@
 /* freadln: reads messages continuously from the lines of 
  * a file that doesn't necessarily need to fit 
  * into the RAM of your system
- *
- * Franz Zotter zotter@iem.at, 2007
- * Institute of Electronic Music and Acoustics
- *
  */
 
 static t_class *freadln_class;
@@ -112,7 +111,7 @@ static void freadln_open (t_freadln *x, t_symbol *s, t_symbol*type)
    strcpy(x->x_filename+len,"/");
    strcpy(x->x_filename+len+1,s->s_name);
    if (!(x->x_file=fopen(x->x_filename, "r"))) {
-      pd_error("freadln: failed to open %128s",filenamebuf);
+      pd_error(x, "freadln: failed to open %128s",filenamebuf);
       return;
    }
    if (!(x->x_textbuf = (char *) getbytes (MIN_FREADLN_LENGTH * sizeof(char)))) {
