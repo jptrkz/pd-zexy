@@ -1,15 +1,16 @@
-Format-Specification: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?rev=135
-Name: zexy
-Maintainer: IOhannes m zmölnig
+Format: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=174
+Upstream-Name: zexy
+Upstream-Contact: IOhannes m zmölnig
 Source: http://puredata.info/community/projects/software/zexy/
 
-Copyright: 1999-2004, IOhannes m zmölnig <zmoelnig@iem.at>
-License: GPL-2
+Files: *
+Copyright: 1999-2011, IOhannes m zmölnig <zmoelnig@iem.at>
+License: GPL-2+
 
-Files: ./src/freadln.c,
-	./src/fwriteln.c
+Files: ./src/freadln.c
+ ./src/fwriteln.c
 Copyright: 2007, Franz Zotter
-License: GPL-2
+License: GPL-2+
 
 Files: ./build/autoconf/autogen.sh
 Copyright: 2005-2007, United States Government as represented by the U.S. Army Research Laboratory.
@@ -21,41 +22,32 @@ License: other-GAP-FSF-Notice
 
 Files: ./src/configure
 Copyright: 1992-1996, 1998-2001, 2010, Free Software Foundation, Inc
-License: other-GAP-Notice
+License: other-GAP-FSF
 
 Files: ./src/matchbox.c
-Copyright: 1998-2004, The Regents of the University of California (Regents).
-	1999-2004, IOhannes m zmölnig <zmoelnig@iem.at>
-License: GPL-2 and MIT
+Copyright: 1999-2011, IOhannes m zmölnig <zmoelnig@iem.at>
+	1998-2004, The Regents of the University of California (Regents).
+License: GPL-2+ and MIT
 
 Files: ./src/dirac~.c
-Copyright: 2005, tim blechmann
-	IOhannes m zmölnig <zmoelnig@iem.at>
-License: GPL-2
+Copyright: 1999-2011, IOhannes m zmölnig <zmoelnig@iem.at>
+	2005, tim blechmann
+License: GPL-2+
 
 Files: ./src/sfplay.c
-Copyright: 1999-2004, IOhannes m zmölnig <zmoelnig@iem.at>
+Copyright: 1999-2011, IOhannes m zmölnig <zmoelnig@iem.at>
 	1999, Winfried Ritsch <ritsch@iem.kug.ac.at>
-License: GPL-2
+License: GPL-2+
 
 Files: ./src/absgn~.c
 Copyright: 2006, Tim Blechmann
-License: GPL-2
+License: GPL-2+
 
 Files: ./debian/*
 Copyright: 2002, Guenter Geiger <geiger@debian.org>
 	2010-2011, IOhannes m zmölnig <zmoelnig@iem.at>
 	2010, Jonas Smedegaard <dr@jones.dk>
 License: GPL-2+
-
-License: GPL-2
- license: GNU General Public License v.2
- .
- On Debian systems, the complete text of the GNU General Public License
- (GPL) version 2 can be found in "/usr/share/common-licenses/GPL-2".
- .
- You should have received a copy of the GNU General Public License along
- with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 License: GPL-2+
  This program is free software; you can redistribute it and/or modify it
@@ -87,7 +79,7 @@ License: other-GAP-FSF-Notice
 License: other-GAP-FSF
  This configure script is free software; the Free Software Foundation
  gives unlimited permission to copy, distribute and modify it.
-
+ 
 License: MIT
  Permission to use, copy, modify, distribute, and distribute modified
  versions of this software and its documentation without fee and without
