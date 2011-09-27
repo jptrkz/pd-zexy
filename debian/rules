@@ -44,3 +44,4 @@ DEB_PHONY_RULES += pristine-revert
 clean:: pristine-revert
 pristine-revert: makefile-clean
 	cp -f debian/pristine/configure src/
+	cp -rf debian/pristine/autom4te src/autom4te.cache
