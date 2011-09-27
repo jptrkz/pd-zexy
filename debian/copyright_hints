@@ -81,6 +81,9 @@ Files: BUGS.txt
  debian/control.in
  debian/gbp.conf
  debian/install
+ debian/pristine/autom4te/requests
+ debian/pristine/autom4te/traces.0
+ debian/pristine/autom4te/traces.1
  debian/source/format
  debian/source/local-options
  debian/watch
@@ -165,6 +168,9 @@ Files: BUGS.txt
  src/Makefile
  src/Makefile.nt
  src/alias
+ src/autom4te.cache/requests
+ src/autom4te.cache/traces.0
+ src/autom4te.cache/traces.1
  src/bootstrap.sh
  src/configure.ac
  src/makealias.sh
@@ -372,21 +378,25 @@ Copyright: 1999-2011, IOhannes m zmölnig, forum::für::umläute, institute of e
 License: GPL-2+
  FIXME
 
-Files: src/lpt.c
- src/relay.c
-Copyright: 1999-2011, IOhannes m zmölnig, forum::für::umläute, institute of electronic music and acoustics (iem)
- 2000:forum::für::umläute:2005,
- 2106:forum::für::umläute:2005,
-License: GPL-2+
- FIXME
-
-Files: debian/pristine/configure
+Files: debian/pristine/autom4te/output.0
+ debian/pristine/autom4te/output.1
+ debian/pristine/configure
+ src/autom4te.cache/output.0
+ src/autom4te.cache/output.1
  src/configure
 Copyright: (ISLOWER ? 'A' + ( - 'a') : )
  (ISLOWER ? ( | 0x40) : )
  1992-1996, 1998-2001,
  2010, Free Software Foundation, Inc
 License: UNKNOWN
+ FIXME
+
+Files: src/lpt.c
+ src/relay.c
+Copyright: 1999-2011, IOhannes m zmölnig, forum::für::umläute, institute of electronic music and acoustics (iem)
+ 2000:forum::für::umläute:2005,
+ 2106:forum::für::umläute:2005,
+License: GPL-2+
  FIXME
 
 Files: abs/list2int.pd
