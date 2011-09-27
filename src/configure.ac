@@ -73,11 +73,22 @@ if test "x$with_pd" != "x"; then
 
   AC_MSG_RESULT([adding ${PDPATH}/src to LDFLAGS])
   LDFLAGS="-L${PDPATH}/src ${LDFLAGS}"
+ else
+  if test -d "${PDPATH}"; then
+   AC_MSG_RESULT([adding ${PDPATH} to INCLUDES])
+   INCLUDES="-I${PDPATH} ${INCLUDES}"
+  fi
  fi
  if test -d "${PDPATH}/bin"; then
   AC_MSG_RESULT([adding ${PDPATH}/bin to LDFLAGS])
   LDFLAGS="-L${PDPATH}/bin ${LDFLAGS}"
+ else
+  if test -d "${PDPATH}"; then
+   AC_MSG_RESULT([adding ${PDPATH} to LDFLAGS])
+   LDFLAGS="-L${PDPATH} ${LDFLAGS}"
+  fi
  fi
+
 fi
 
 if test $includedir
@@ -153,7 +164,7 @@ if test "x$enable_PIC" != "xno"; then
  AC_CHECK_CFLAGS([-fPIC])
 fi
 
-AC_CHECK_CFLAGS([-mfpmath=sse -msse])
+AC_CHECK_SIMD
 
 dnl if we don't have $LD set, we set it to $(CC)
 dnl LD=${LD:=$CC}
