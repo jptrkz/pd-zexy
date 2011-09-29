@@ -1,16 +1,22 @@
 pd-zexy (2.2.5-1) UNRELEASED; urgency=low
 
-  [ IOhannes m zmölnig ]
   * New upstream (Closes: #643454)
+
+  [ IOhannes m zmoelnig (gpg-key at iem) ]
+  * Bumped standards to 3.9.2
+  * Build-Depend on puredata-dev rather than puredata, since only headers are
+    needed
+  * Build-Depend on puredata-core in order to run test-suite
+  * Build-Depend on autotools-dev for up-to-date config.*
   * Added watch file.
   * Deleted "remove-sse.patch" as it is no longer needed with new upstream.
   * Removed hacks to revert original configure (no longer needed)
+  * Use CDBS's "pd.mk"
   * Run test-suite during build
+  * Prevent .la files from being installed
+  * Depend on "puredata" with fallback to meta-package "pd"
 
-  [ IOhannes m zmoelnig (gpg-key at iem) ]
-  * Build-Depend on autotools-dev for up-to-date config.*
-
- -- IOhannes m zmoelnig (gpg-key at iem) <zmoelnig@iem.at>  Thu, 29 Sep 2011 19:25:12 +0200
+ -- IOhannes m zmoelnig (gpg-key at iem) <zmoelnig@iem.at>  Thu, 29 Sep 2011 19:37:59 +0200
 
 pd-zexy (2.2.3-2) unstable; urgency=low
 
