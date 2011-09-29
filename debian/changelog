@@ -7,7 +7,10 @@ pd-zexy (2.2.5-1) UNRELEASED; urgency=low
   * Removed hacks to revert original configure (no longer needed)
   * Run test-suite during build
 
- -- IOhannes m zmoelnig (gpg-key at iem) <zmoelnig@iem.at>  Thu, 29 Sep 2011 16:36:39 +0200
+  [ IOhannes m zmoelnig (gpg-key at iem) ]
+  * Build-Depend on autotools-dev for up-to-date config.*
+
+ -- IOhannes m zmoelnig (gpg-key at iem) <zmoelnig@iem.at>  Thu, 29 Sep 2011 19:25:12 +0200
 
 pd-zexy (2.2.3-2) unstable; urgency=low
 
