@@ -27,3 +27,7 @@ CDBS_BUILD_DEPENDS_rules_utils_copyright-check =
 CDBS_BUILD_DEPENDS_rules_utils_buildinfo =
 
 DEB_CONFIGURE_EXTRA_FLAGS += --with-extension=pd_linux
+
+binary-predeb/pd-zexy::
+	find "$(cdbs_curdestdir)" -name "*.la" -delete
+
