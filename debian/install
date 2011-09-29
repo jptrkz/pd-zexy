@@ -1,3 +1,0 @@
-src/zexy.pd_linux usr/lib/pd/extra/zexy/
-abs/*.pd usr/lib/pd/extra/zexy/
-reference/*.pd usr/lib/pd/extra/zexy/
