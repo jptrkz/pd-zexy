@@ -1,4 +1,4 @@
-pd-zexy (2.2.5-1) UNRELEASED; urgency=low
+pd-zexy (2.2.5-1) unstable; urgency=low
 
   * New upstream (Closes: #643454)
 
@@ -16,7 +16,7 @@ pd-zexy (2.2.5-1) UNRELEASED; urgency=low
   * Prevent .la files from being installed
   * Depend on "puredata" with fallback to meta-package "pd"
 
- -- IOhannes m zmoelnig (gpg-key at iem) <zmoelnig@iem.at>  Thu, 29 Sep 2011 19:37:59 +0200
+ -- IOhannes m zmoelnig (gpg-key at iem) <zmoelnig@iem.at>  Fri, 30 Sep 2011 12:51:13 +0200
 
 pd-zexy (2.2.3-2) unstable; urgency=low
 
