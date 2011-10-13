@@ -19,7 +19,7 @@ Package: pd-zexy
 Architecture: any
 Depends: ${shlibs:Depends},
  ${misc:Depends},
- puredata | pd
+ puredata-core | pd
 Description: General Purpose addon library for Pd
  zexy is "the swiss army knife for Pure Data".
  .
