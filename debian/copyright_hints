@@ -73,7 +73,7 @@ Files: ChangeLog
  debian/control
  debian/control.in
  debian/gbp.conf
- debian/pd-zexy.lintian-overrides
+ debian/pd-zexy.links
  debian/source/format
  debian/source/local-options
  debian/watch
