@@ -31,5 +31,8 @@ CDBS_BUILD_DEPENDS_rules_utils_buildinfo =
 DEB_CONFIGURE_EXTRA_FLAGS += --with-extension=pd_linux
 
 binary-predeb/pd-zexy::
+	# remove libtools leftovers
 	find "$(cdbs_curdestdir)" -name "*.la" -delete
+	# we rather link to the debian provided GPL-2
+	rm "$(cdbs_curdestdir)/usr/lib/pd/extra/zexy/LICENSE.txt"
 
