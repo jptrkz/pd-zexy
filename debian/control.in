@@ -5,8 +5,8 @@ Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alio
 Uploaders: IOhannes m zmoelnig (gpg-key at iem) <zmoelnig@iem.at>,
  Jonas Smedegaard <dr@jones.dk>
 Build-Depends: @cdbs@,
- puredata-dev | puredata,
- puredata-core | puredata
+ puredata-dev | puredata (<< 0.43),
+ puredata-core | puredata (<< 0.43)
 Standards-Version: 3.9.2
 Homepage: http://puredata.info/community/projects/software/zexy
 Vcs-Git: git://anonscm.debian.org/pkg-multimedia/pd-zexy
