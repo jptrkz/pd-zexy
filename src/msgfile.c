@@ -712,22 +712,126 @@ static void msgfile_read2(t_msgfile *x, t_symbol *filename, t_symbol *format)
   /* convert separators and eols to what pd expects in a binbuf*/
   bufptr=readbuf;
 
-# define MSGFILE_HEADROOM 1024
-  charbinbuflength=2*length+MSGFILE_HEADROOM;
+# define msgfile_HEADROOM 1024
+  charbinbuflength=2*length+msgfile_HEADROOM;
 
   charbinbuf=(char*)getbytes(charbinbuflength);
   
   cbb=charbinbuf;
   for(pos=0; pos<charbinbuflength; pos++)charbinbuf[pos]=0;
 
+  const char *rtf_pass = "rtf";  
+  const char *ext = strrchr(filename->s_name, '.');
+
+  int rtfconv = (strcmp(ext + 1, rtf_pass) == 0);
+  int rtf_brace = 0;
+  int rtf_slash = 0;
+  int rtf_gate  = 0;
+  
   *cbb++=';';
   pos=1;
   while (readlength--) {
     if(pos>=charbinbuflength){
-      pd_error(x, "msgfile: read error (headroom %d too small!)", MSGFILE_HEADROOM);
+      pd_error(x, "msgfile: read error (headroom %d too small!)", msgfile_HEADROOM);
       goto read_error;
       break;
     }
+   
+  // check for .rtf extension
+  
+  if(strcmp(ext + 1, rtf_pass) == 0) {
+    
+    // 0x7B is '{' 
+    // 0x7D is '}'
+    // 0x5C is '\'
+
+      if(*bufptr == 0x7B) {
+        if(rtf_slash) {
+          rtf_gate = 1;
+          rtf_slash = 0;
+          goto rtf_pass;
+        }
+        else {
+          rtf_brace = 1;
+          rtf_slash = 0;
+          bufptr++;
+          continue;
+        }
+      }
+      
+      if(*bufptr == 0x7D) {
+        if(rtf_slash) {
+          rtf_gate = 1;
+          rtf_brace = 0;
+          goto rtf_pass;
+        }
+        else {
+          rtf_brace = 0;
+          rtf_slash = 0;
+          bufptr++;
+          continue;
+        }
+      }
+      
+      if(rtf_brace) {
+        bufptr++;
+        continue;
+      }
+      
+      if(*bufptr == 0x5C) {
+        if(rtf_slash) {
+          post("WARNING: 'backslash' in text");
+          rtf_gate = 1;
+          rtf_slash = 0;
+          goto rtf_pass;
+        }
+        else {
+          rtf_slash = 1;
+          rtf_gate = 0; 
+          bufptr++;
+          continue;
+        }
+      }
+      
+      if(*bufptr == '\n') {
+        rtf_gate = 1;
+        if(rtf_slash) {  
+          rtf_slash = 0;
+          goto rtf_pass;
+        }
+        else {
+          bufptr++;
+          continue;
+        }
+      }
+      
+      if(*bufptr == ' ') {
+        rtf_slash = 0;
+        if(rtf_gate) {
+          goto rtf_pass;
+        }
+        else {
+          rtf_gate = 1;
+          bufptr++;
+          continue;
+        }
+      }
+      
+      // character is not '{', '}', '\', ' ' or '\n'
+      
+      rtf_slash = 0;
+      if(rtf_gate) {
+        goto rtf_pass;
+      }
+      else {
+        bufptr++;
+        continue;
+      } 
+        
+    }
+  
+    rtf_pass: ;
+    
     if (*bufptr == separator) {
       *cbb = ' ';
     } else if (*bufptr==eol) {
