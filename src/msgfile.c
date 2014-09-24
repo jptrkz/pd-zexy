@@ -712,8 +712,8 @@ static void msgfile_read2(t_msgfile *x, t_symbol *filename, t_symbol *format)
   /* convert separators and eols to what pd expects in a binbuf*/
   bufptr=readbuf;
 
-# define msgfile_HEADROOM 1024
-  charbinbuflength=2*length+msgfile_HEADROOM;
+# define MSGFILE_HEADROOM 1024
+  charbinbuflength=2*length+MSGFILE_HEADROOM;
 
   charbinbuf=(char*)getbytes(charbinbuflength);
   
@@ -732,7 +732,7 @@ static void msgfile_read2(t_msgfile *x, t_symbol *filename, t_symbol *format)
   pos=1;
   while (readlength--) {
     if(pos>=charbinbuflength){
-      pd_error(x, "msgfile: read error (headroom %d too small!)", msgfile_HEADROOM);
+      pd_error(x, "msgfile: read error (headroom %d too small!)", MSGFILE_HEADROOM);
       goto read_error;
       break;
     }
